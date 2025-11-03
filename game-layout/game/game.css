@@ -1,0 +1,37 @@
+*{
+box-sizing:border-box;
+margin:0;
+}
+img{
+	width:100%;	
+}
+.box1{
+	width:700px;
+	height:600px;
+	background-color:#3FA2F6;
+margin:50px;
+}
+h1{font-family:sans-serif;
+font-size:100px;
+}
+.box2{
+	display:inline-block;
+float:left;
+	height:100px;
+	width:100px;
+	background-color:;
+	border:10px solid #0F67B1;
+padding:10px;
+
+}
+.box3{
+	width:700px;
+	height:150px;
+	background-color:#3FA2F6;
+	margin:30px;
+	border:10px solid #0F67B1;
+}
+button{
+	background-color: #B692C2;
+	font-size:50px;
+}
