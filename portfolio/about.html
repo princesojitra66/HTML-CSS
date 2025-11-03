@@ -1,0 +1,582 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ABOUT</title>
+  <link rel="stylesheet" href="./css/all.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <style>
+            #preloader {
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100vh;
+  width: 100%;
+  z-index: 1000000000000000000;
+  display: flex;
+}
+
+#preloader:before,
+#preloader:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 50%;
+  height: 100%;
+  z-index: -1;
+  background-color: #000;
+  transition: all 0.3s ease 0s;
+}
+
+#preloader:after {
+  left: auto;
+  right: 0;
+}
+
+#preloader .loader_line {
+  margin: auto;
+  width: 1px;
+  height: 250px;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.8s ease 0s;
+}
+
+.loader_line:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 1px;
+  height: 0%;
+  transform: translateY(-50%);
+  background-color: #fff;
+  -webkit-animation: lineheight 1000ms ease-in-out 0s forwards;
+  -o-animation: lineheight 1000ms ease-in-out 0s forwards;
+  animation: lineheight 1000ms ease-in-out 0s forwards;
+}
+
+.loader_line:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 1px;
+  height: 100%;
+  background-color: #999999;
+  transform: translateY(-100%);
+  animation: lineround 1200ms linear 0s infinite;
+  animation-delay: 2000ms;
+}
+
+@keyframes lineheight {
+  0% {
+    height: 0%;
+  }
+  100% {
+    height: 100%;
+  }
+}
+@keyframes lineround {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(200%);
+  }
+}
+.portfolio_list {
+  min-height: 50vh;
+}
+
+/*hiding all*/
+.preloaded .loader_line:after {
+  opacity: 0;
+}
+
+.preloaded .loader_line {
+  opacity: 0;
+  height: 100% !important;
+}
+
+.preloaded:before,
+.preloaded:after {
+  animation: preloadedzero 600ms ease-in-out 500ms forwards;
+}
+
+@keyframes preloadedzero {
+  0% {
+    width: 50%;
+  }
+  100% {
+    width: 0%;
+  }
+}
+      .color-r{
+        color: rgb(247, 43, 28);
+      }
+      .color-w{
+      color: rgba(255, 255, 255, 0.636);
+      }
+      .color {
+        background-color: #212529;
+      }
+      .color:hover {
+        background-color: rgb(247, 43, 28);
+      }
+      .hover {
+        display: none;
+        visibility: hidden;
+        transform: translatex(50px);
+        transition: all 0.2s ease-in-out;
+      }
+      .img:hover .hover {
+        display: inline-block;
+        visibility: visible;
+        transform: translatex(25px);
+      }
+      .mix{
+        mix-blend-mode: difference;
+      }
+       .hover1:hover{
+        background-color: rgb(247, 43, 28);
+      }
+      .title-section {
+      margin: 0 auto;
+      width: 100%;
+      position: relative;
+      padding: 80px 0;
+      }
+      .title-bg{
+        font-size: 110px;
+      left: 0;
+      letter-spacing: 10px;
+      line-height: 0.7;
+      position: absolute;
+      right: 0;
+      top: 32%;
+      text-transform: uppercase;
+      font-weight: 800;
+      
+      color: rgba(255, 255, 255, 0.07);
+      /* z-index: -1; */
+      }
+     
+      h2{
+        font-size: 56px;
+      font-weight: 900;
+      
+      text-transform: uppercase;
+      margin: 0;
+      }
+     h3,.title{
+        /* opacity: .8; */
+        text-transform: capitalize;
+        color: rgba(255, 255, 255,0.5);
+      }
+      .value{
+        font-weight: 600;
+        color: #FFF;
+      }
+      .tan{
+        transform: translate(-0%, -50%);
+      }
+    </style>
+</head>
+<div id="preloader">
+  <div class="loader_line"></div>
+</div>
+<body>
+  <header class="bg-dark d-flex justify-content-between align-items-center d-md-none">
+    <h2 class="text-light d-inline-block">
+      my  
+      <span class="color-r">about</span>
+    </h2>
+    <button class="btn fs-1" type="button" data-bs-toggle="offcanvas" data-bs-target="#staticBackdrop" aria-controls="staticBackdrop">
+      <i class="fa-solid fa-bars text-white"></i>
+    </button>
+    
+    <div class="offcanvas offcanvas-start" data-bs-backdrop="static" tabindex="-1" id="staticBackdrop" aria-labelledby="staticBackdropLabel">
+      <div class="offcanvas-header bg-dark">
+        <h5 class="offcanvas-title" id="staticBackdropLabel"></h5>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body bg-dark">
+        <div>
+          <ul class="list-unstyled">
+            <li class="fs-1">
+              <a href="./index.html" class="text-decoration-none img">
+                <i class="fa-solid fa-house text-light  color"></i>
+                <span class="fs-2 text-white color">home</span>
+              </a>
+            </li>
+            <li class="fs-1">
+              <a href="./about.html" class="text-decoration-none img">
+                <i class="fa-solid fa-user text-light   color" ></i>
+                <span class="fs-2 text-white color">about</span>
+              </a>
+            </li>
+            <li class="fs-1">
+              <a href="./work.html" class="text-decoration-none img">
+                <i class="fa-solid fa-briefcase text-light   color"></i>
+                <span class="fs-2 text-white color"> work</span>
+              </a>
+            </li>
+            <li class="fs-1">
+              <a href="./contact.html" class="text-decoration-none img">
+                <i class="fa-solid fa-envelope-open text-light  color"></i>
+                <span class="fs-2 text-white color">contact</span>
+              </a>
+            </li>
+            <li class="fs-1">
+              <a href="./blog.html" class="text-decoration-none img">
+                <i class="fa-solid fa-comments text-light   color"></i>
+                <span class="fs-2 text-white color">blog</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+   </header>
+  <main style="background-color: #111;"> 
+    <section style="height: 100%;">
+     
+      <div class="container-fluid">
+        <div class="row">
+       
+         <div class="col-12 text-center ">
+            <div class="row title-section d-none d-md-block">
+              <h2 class="text-light">
+                ABOUT 
+                <span class="color-r">ME</span>
+              </h2>
+              <span class="title-bg">Resume</span>
+            </div>
+            <div class="about">
+              <div class="main-content">
+                <div class="container">
+                  <div class="row">
+                    <div class="col-6">
+                      <div class="row d-flex">
+                        <div class="col-12 ">
+                          <h3>personal infos</h3>
+                        </div>
+                        <div class="col-12">
+                          <div class="row">
+                          <div class="col-6 p-0 ">
+                            <div>
+                              <ul class="list-unstyled text-start">
+                                <li class="p-3">
+                                  <span class="title">first name :</span>
+                                  <span class="value  ">prince</span>
+                                </li>
+                                <li class="p-3 pt-0">
+                                  <span class="title">last name :</span>
+                                  <span class="value ">sojitra</span>
+                                </li>
+                                <li class="p-3 pt-0"> 
+                                  <span class="title">Age : </span>
+                                  <span class="value  ">19</span>
+                                </li>
+                                <li class="p-3 pt-0">
+                                  <span class="title">Nationality : </span>
+                                  <span class="value ">Steve</span>
+                                </li>
+                                <li class="p-3 pt-0">
+                                  <span class="title">Freelance :</span>
+                                  <span class="value  ">Steve</span>
+                                </li>
+                              </ul>
+                            </div>
+                            
+                          </div>
+                          <div class="col-6 p-0">
+                            <div class="text-center">
+                              <ul class="list-unstyled text-start">
+                                <li class="p-3 ">
+                                  <span class="title">Address :</span>
+                                  <span class="value  ">surat</span>
+                                </li>
+                                <li class="p-3 pt-0">
+                                  <span class="title">phone : </span>
+                                  <span class="value  ">Steve</span>
+                                </li>
+                                <li class="p-3 pt-0"> 
+                                  <span class="title">Email :  </span>
+                                  <span class="value  ">princesojitra3914@gmail.com</span>
+                                </li>
+                                <li class="p-3 pt-0">
+                                  <span class="title">Skype :  </span>
+                                  <span class="value ">Steve</span>
+                                </li>
+                                <li class="p-3 pt-0">
+                                  <span class="title">langages :</span>
+                                  <span class="value  ">Steve</span>
+                                </li>
+                              </ul>
+                            </div>
+                           
+                          </div>
+                          </div>
+                          <div class="col-12 mt-2  ">
+                            <a class="button list-unstyled text-decoration-none text-light border-1 bg-danger rounded-pill p-3" href="#">
+                              <span class="button-text">Download CV</span>
+                              <span class="button-icon fa fa-download"></span>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-6 pb-5">
+                      <div class="row">
+                        <div class="col-6 p-2 ">
+                          <div class="border border-danger py-3  ">
+                            <div class="fs-1 text-start px-5 color-r">12+</div>
+                            <div class="fs-6 text-end px-5 color-w">years of  experience</div>
+                          </div>
+                         
+                        </div> 
+                        <div class="col-6 p-2 ">
+                          <div class="border border-danger py-3  ">
+                            <div class="fs-1 text-start px-5 color-r">12+</div>
+                            <div class="fs-6 text-end px-5 color-w">years of  experience</div>
+                          </div>
+                         
+                        </div> 
+                        <div class="col-6 p-2 ">
+                          <div class="border border-danger py-3  ">
+                            <div class="fs-1 text-start px-5 color-r">12+</div>
+                            <div class="fs-6 text-end px-5 color-w">years of experience</div>
+                          </div>
+                         
+                        </div> 
+                        <div class="col-6 p-2 ">
+                          <div class="border border-danger py-3  ">
+                            <div class="fs-1 text-start px-5 color-r">12+</div>
+                            <div class="fs-6 text-end px-5 color-w">years of  experience</div>
+                          </div>
+                         
+                        </div> 
+                      </div>
+                    </div>
+                    <div class="col-12 ">
+                      <div class="fs-1 text-white py-5">My Skills</div>
+                      <div class="row">
+                        <div class="col-6">
+                          <div class="row">
+                            <div class="col-6 p-5 color-w">
+                              <div class="border border-danger rounded-5 p-3 fs-5"  >
+                                html
+                              </div>
+                            </div  class="border border-danger rounded-5 p-3 fs-5">
+                            <div class="col-6 p-5 color-w">
+                              <div  class="border border-danger rounded-5 p-3 fs-5">
+                                javascript
+                              </div>
+                            </div>
+                            <div class="col-6 p-5 color-w">
+                              <div  class="border border-danger rounded-5 p-3 fs-5"v>
+                                wordpress
+                              </div>
+                            </div>
+                            <div class="col-6 p-5 color-w">
+                              <div  class="border border-danger rounded-5 p-3 fs-5">
+                                jquery
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-6 ">
+                          <div class="row">
+                            <div class="col-6 p-5 color-w">
+                              <div  class="border border-danger rounded-5 p-3 fs-5">
+                                css
+                              </div>
+                            </div>
+                            <div class="col-6 p-5 color-w">
+                              <div  class="border border-danger rounded-5 p-3 fs-5">
+                                php
+                              </div>
+                            </div>
+                            <div class="col-6 p-5 color-w">
+                              <div  class="border border-danger rounded-5 p-3 fs-5">
+                                angular
+                              </div>
+                            </div>
+                            <div class="col-6 p-5 color-w">
+                              <div  class="border border-danger rounded-5 p-3 fs-5">
+                                react
+                              </div>
+                            </div>
+                          </div>
+                         
+                        </div>
+                      </div>
+                       
+                    </div>
+                  </div>
+                  <div class="col-12">
+                    <div class="fs-1 text-white py-5">Experience & Education</div>
+                    <div class="row">
+                      <div class="col-6">
+                        <div class="text-start py-3">
+                          <div class="pb-3">
+                            <span  class="border rounded-pill bg-secondary px-2" >
+                              2018 - Present
+                            </span>
+                          </div>
+                          <h3 class="text-white">
+                            Web Developer
+                          </h3>
+                          <div class="pe-5">
+                            <p class="pe-5 text-white">
+                              Lorem ipsum dolor sit amet, consectetur tempor incididunt ut labore adipisicing elit,
+                            </p>
+                          </div>
+                        </div>
+                        <div class="text-start pb-3">
+                          <div class="pb-3">
+                            <span  class="border rounded-pill bg-secondary px-2" >
+                              2018 - Present
+                            </span>
+                          </div>
+                          <h3 class="text-white">
+                            Web Developer
+                          </h3>
+                          <div class="pe-5">
+                            <p class="pe-5 text-white">
+                              Lorem ipsum dolor sit amet, consectetur tempor incididunt ut labore adipisicing elit,
+                            </p>
+                          </div>
+                        </div>
+                        <div class="text-start pb-3">
+                          <div class="pb-3">
+                            <span  class="border rounded-pill bg-secondary px-2" >
+                              2018 - Present
+                            </span>
+                          </div>
+                          <h3 class="text-white">
+                            Web Developer
+                          </h3>
+                          <div class="pe-5">
+                            <p class="pe-5 text-white">
+                              Lorem ipsum dolor sit amet, consectetur tempor incididunt ut labore adipisicing elit,
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-6">
+                        <div class="text-start py-3">
+                          <div class="pb-3">
+                            <span  class="border rounded-pill bg-secondary px-2" >
+                              2018 - Present
+                            </span>
+                          </div>
+                          <h3 class="text-white">
+                            Web Developer
+                          </h3>
+                          <div class="pe-5">
+                            <p class="pe-5 text-white">
+                              Lorem ipsum dolor sit amet, consectetur tempor incididunt ut labore adipisicing elit,
+                            </p>
+                          </div>
+                        </div>
+                        <div class="text-start pb-3">
+                          <div class="pb-3">
+                            <span  class="border rounded-pill bg-secondary px-2" >
+                              2018 - Present
+                            </span>
+                          </div>
+                          <h3 class="text-white">
+                            Web Developer
+                          </h3>
+                          <div class="pe-5">
+                            <p class="pe-5 text-white">
+                              Lorem ipsum dolor sit amet, consectetur tempor incididunt ut labore adipisicing elit,
+                            </p>
+                          </div>
+                        </div>
+                        <div class="text-start pb-3">
+                          <div class="pb-3">
+                            <span  class="border rounded-pill bg-secondary px-2" >
+                              2018 - Present
+                            </span>
+                          </div>
+                          <h3 class="text-white">
+                            Web Developer
+                          </h3>
+                          <div class="pe-5">
+                            <p class="pe-5 text-white">
+                              Lorem ipsum dolor sit amet, consectetur tempor incididunt ut labore adipisicing elit,
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+         </div>
+         <div class="col-2 d-flex justify-content-end align-items-center position-fixed top-50 end-0 tan">
+          <ul class="list-unstyled pe-5 text-center ">
+            <li class="p-3 pe-2">
+              <a href="./index.html" class="text-decoration-none img">
+                <div class="d-inline-block text-light hover border-1 rounded-pill p-2 pe-4 mix"
+                  style=" background-color: rgb(247, 43, 28);z-index: 999;">HOME</div><i 
+                class="fa-solid fa-house text-light   p-3 rounded-5  color"></i>
+              </a>
+            </li>
+            <li class="p-3 pe-2">
+              <a href="./about.html" class="text-decoration-none img">
+                <div class="d-inline-block text-light hover border-1 rounded-pill p-2 pe-4 mix "
+                style=" background-color: rgb(247, 43, 28);z-index: -999;">ABOUT</div><i
+                  class="fa-solid fa-user text-light   p-3 rounded-5 color" style="z-index: 0;"></i>
+              </a>
+            </li>
+            <li class=" p-3 pe-4">
+              <a href="./work.html" class="text-decoration-none img">
+                <div class="d-inline-block text-light hover border-1 rounded-pill p-2 pe-4 mix"
+                style=" background-color: rgb(247, 43, 28);z-index: 999;">portfolio</div><i
+                  class="fa-solid fa-briefcase text-light   p-3 rounded-5 color"></i>
+              </a></li>
+            <li class="p-3 pe-3">
+              <a href="./contact.html" class="text-decoration-none img">
+                <div class="d-inline-block text-light hover border-1 rounded-pill p-2 pe-4 mix "
+                style=" background-color: rgb(247, 43, 28);z-index: 999;">contact</div><i
+                  class="fa-solid fa-envelope-open text-light   p-3 rounded-5  color"></i>
+              </a></li>
+            <li class="p-3 pe-0">
+              <a href="./blog.html" class="text-decoration-none img">
+                <div class="d-inline-block text-light hover border-1 rounded-pill p-2 pe-4 mix "
+                style=" background-color: rgb(247, 43, 28);z-index: 999;">blog</div><i
+                  class="fa-solid fa-comments text-light   p-3 rounded-5  color"></i>
+              </a></li>
+          </ul>
+        </div>
+        </div>
+      </div>
+    </section> 
+  </main>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const preloader = document.querySelector("#preloader");
+        window.addEventListener("load", () => {
+          preloader.classList.add("preloaded");
+          setTimeout(() => {
+            preloader.remove();
+          }, 1000);
+        });
+      });
+    </script>
+</body>
+
+</html>
